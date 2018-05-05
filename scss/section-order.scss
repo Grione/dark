@@ -1,0 +1,239 @@
+* {
+    @include phones {
+        font-size: 12px;
+    }
+}
+
+.section-order {
+    background: url("../img/bg/order.jpg") center center no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+}
+
+.order-title{
+font-family: 'Gagalin';
+font-weight: 500;
+font-size: rem(72px);
+color: #f9b43b;
+text-align: center;
+padding: rem(80px);
+height: 30%;
+white-space: nowrap;
+
+    @include tablets {
+        padding: rem(80px) 0 0 0;
+        font-size: rem(68px);
+        white-space: initial;
+    }
+
+    @include phones {
+        white-space: normal;
+        padding: 0;
+        font-size: rem(55px);
+        height: 25%;
+    }
+}
+.forms {
+    display: flex;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+.form_left {
+    width: 50%;
+    margin-right: rem(20px);
+
+    @include tablets {
+        margin-right: 0;
+        width: 95%;
+    }
+
+    @include phones {
+        width: 95%;
+    }
+}
+
+.form_right {
+    width: 50%;
+
+    @include tablets {
+        width: 95%;
+    }
+
+    @include phones {
+        width: 95%;
+    }
+    
+}
+.form {
+    color: #fff;
+}
+
+.form_row {
+    margin-bottom: rem(20px);
+    display: flex;
+}
+
+.form_block {
+    display: block;
+    flex: 1;
+    margin-right: rem(20px);
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.form_input {
+    background: #fff;
+    padding: rem(10px);
+    border: none;
+    border-radius: rem(5px);
+    width: 100%;
+    outline: none
+}
+
+.form_two {
+    color: #fff;
+    display: flex;
+    flex-flow: column;
+    
+}
+
+.form_radio {
+    cursor: pointer;
+    
+}
+
+.radio_input {
+    position: absolute;
+    visibility: hidden;
+}
+
+.radio_btn {
+    position: relative;
+    display: inline-block;
+    width: rem(16px);
+    height: rem(16px);
+    background-color: #fff;
+    border-radius: 50%;
+
+    &:after {
+        content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		width: 50%;
+		height: 50%;     
+        background-color: #e35028;
+		border-radius:  50%;
+		opacity: 0;
+    }
+}
+
+.radio_input:checked + .radio_btn:after {
+    opacity: 1;
+}
+
+.form_checkbox {
+    cursor: pointer;
+}
+
+.checkbox_input {
+    position: absolute;
+    visibility: hidden;
+}
+
+.checkbox_btn {
+    position: relative;
+    display: inline-block;
+    width: rem(16px);
+    height: rem(16px);
+    background-color: #fff;
+}
+
+.checkbox_btn:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background: url("../img/icon/check.png"); 
+        background-size: 70%;
+        background-position: center;
+        background-repeat: no-repeat;
+    opacity: 0;
+    }
+
+.checkbox_input:checked + .checkbox_btn:after {
+    opacity: 1;
+}
+
+.radio_txt, .checkbox_txt {
+    padding-left: rem(10px);
+    padding-right: rem(10px);
+}
+
+.textarea {
+    background: #fff;
+    padding: rem(10px);
+    border: none;
+    border-radius: rem(5px);
+    width: 100%;
+    height: rem(114px);
+    resize: none;
+    outline: none;
+
+    @include phones {
+        height: rem(60px);
+    }
+}
+
+.form_two-after {
+    height: 30%;
+
+    @include phones {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.form_two-after_area {
+    height: 25%;
+}
+
+.order-button {
+    @include phones {
+        text-align: center;
+        margin-top: 15px;
+    }
+}
+
+.order-button_order {
+    display: inline-block;
+    padding: rem(10px) rem(16px);
+    background-color: #e35028;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.order-button_clean {
+    padding: rem(10px) rem(16px);
+    background-color:transparent;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+}

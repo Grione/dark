@@ -1,0 +1,144 @@
+.section-team {
+    background: url("../img/bg/team.jpg") no-repeat center center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.team-right {
+   position: absolute;
+    background-color:#2e3133;
+    opacity: .93;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include tablets {
+        width: 100%;
+    }
+}
+
+.team-main {
+    height: 100%;
+    padding: 114px 95px;
+
+    @include phones {
+        padding: 0;
+    }
+}
+.team-main_title {
+  font-family: 'Gagalin';
+  font-weight: 500;
+  font-size: rem(72px);
+  color: #f9b43b;
+  
+  @include tablets {
+      text-align: center;
+      margin-bottom: rem(40px);
+  }
+}
+
+.item-team {
+    list-style: none;
+    margin-bottom: rem(40px);
+
+    @include tablets {
+        text-align: center;
+
+    }
+}
+
+.item-team_activ {
+   
+    .team-content {
+        
+        max-height: 300px;
+        
+    }
+    .team-link:before {
+        transform: rotate(180deg);
+        margin-top: 0;
+    }
+}
+.team-link {
+    text-decoration: none;
+    font-family: 'Gagalin';
+    font-weight: 500;
+    font-size: rem(14px);
+    color: #fff;
+    display: flex;
+
+    @include tablets {
+        justify-content: center;
+        font-size: rem(24px);
+    }
+
+    @include phones {
+        font-size: rem(24px);
+    }
+    
+    &:before {
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border: rem(7px) solid transparent;	
+        border-top: rem(9px) solid #f9b43b;
+        margin-right: rem(10px);
+        margin-top: rem(5px);
+    }
+}
+
+.team-content {
+    max-height: 0;
+    overflow: hidden;
+    display: flex;
+    margin-left: rem(15px);
+    margin-top: rem(15px);
+    transition: 0.3s;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+        margin-left:0;
+    }
+}
+
+.team-pic {
+    width: rem(100px);
+    height: rem(100px);
+    flex: 1 0 auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.team-txt {
+    padding-left: rem(20px);
+} 
+.team-txt_title {
+    font-family: 'Ubuntu';
+    font-weight: bold;
+    font-size: rem(14px);
+    color: #fff;
+}
+
+.team-txt_desc {
+    font-family: 'Ubuntu';
+    font-weight: lighter;
+    font-size: rem(14px);
+    color: #fff;
+    padding-top: rem(22px);
+    width: 70%;
+
+    @include phones {
+        width: initial;
+        padding: rem(22px);
+    }
+}

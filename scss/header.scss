@@ -1,0 +1,58 @@
+.header {
+    display: flex;
+    align-items: center;  
+}
+
+.header-img {
+    margin-top: 10px;
+    margin-left: 80px;
+
+    @include phones {
+        margin-left: 5px;
+    }
+}
+
+.header_menu {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+
+    @include tablets() {
+        display: none;
+    }
+}
+
+.header_menu-list {
+    display: flex;
+    white-space: nowrap;
+    
+}
+.header_menu-item {
+    color: white;
+    margin-right: 30px;
+ }
+
+.header_menu-item:first-child {
+    list-style: none;
+} 
+.header_menu-item:last-child {
+    margin-right: 0;
+} 
+.header_menu-link {
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+}
+
+.menu-button {
+    @include tablets {
+        margin-left: auto
+    }
+
+    @include tablets {
+        margin-left: auto
+    }
+}

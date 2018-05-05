@@ -1,0 +1,251 @@
+.section-dark {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#f9b43b,#eb8c38,#f9b43b);
+}
+
+.dark-content {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    align-items: center;
+}
+
+.dark-left {
+    width: rem(70px);
+    position: absolute;
+    left: rem(-10px);
+}
+
+.scroll-left_img {
+    transform: rotate(90deg);
+}
+
+.dark-right {
+    width: rem(70px);
+    position: absolute;
+    right: rem(-40px);
+}
+
+.scroll-right_img {
+    transform: rotate(-90deg);
+}
+
+.dark-center {
+    // padding: 0 rem(20px);
+    // display: flex;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    
+    @include tablets {
+        flex-direction: column;
+    }
+    
+    @include phones {
+        flex-direction: column;
+        margin-top: rem(10px);
+    }
+}
+
+.slide-one {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+    @include tablets {
+        flex-direction: column;
+    }
+    
+    @include phones {
+        flex-direction: column;
+    }
+}
+
+.dark-center_burger {
+    position: relative;
+}
+
+.dark-center_image {
+    margin-top: rem(77px);
+
+    @include tablets {
+        width: 95%;
+    }
+
+    @include phones {
+        width: 95%;
+    }
+}
+.meal {
+    position: absolute;
+    top: 0;
+    width: rem(90px);
+    height: rem(90px);
+    background-color: #f08c33;
+    border-radius: rem(5px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    &:hover + .meal-hover {
+        transition: .6s;
+        opacity: 1;
+        
+    }
+}
+
+.meal-title {
+    font-family: "Gagalin";
+    color: white;
+    
+}
+
+.meal-hover {
+    position: absolute;
+    top: 0;
+    left: rem(92px);
+    opacity: 0;
+}
+
+.meal-table {
+    padding: rem(20px);
+    background-color: #fff;
+    opacity: .9;
+    border-radius: rem(5px);
+}
+
+.meal-table_prod {
+    font-family: "Ubuntu";
+    font-weight: 500;
+    font-size: rem(14px);
+    color: #2f3234;
+    padding-left: rem(20px)
+}
+
+.meal-table_gramm {
+    font-family: "Ubuntu";
+    font-weight: 400;
+    font-size: rem(14px);
+    color: #2f3234;
+    padding-left: rem(65px)
+}
+.kcal {
+    position: absolute;
+    width: rem(90px);
+    height: rem(90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: .5;
+
+    @include tablets {
+        top: 0;
+        right: 0;
+    }
+
+    @include phones {
+        top: 0;
+        right: 0;
+    }
+}
+
+.kcal-icon {
+    width: rem(60px);
+    height: rem(60px);
+    background-image: url('../img/icon/kkal.svg');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.kcal-txt {
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-family: "Gagalin";
+    font-size: rem(20px);
+
+}
+
+.dark-center_desc {
+    padding-top: rem(50px);
+
+    @include tablets {
+        padding-top: 0;
+    }
+
+    @include phones {
+        padding-top: 0;
+    }
+}
+
+.dark-center_title {
+    font-family: "Gagalin";
+    font-size: rem(72px);
+    color: white;
+    line-height: .9;
+    margin-bottom: rem(50px);
+
+    @include tablets {
+        text-align: center;
+    }
+
+    @include phones {
+        text-align: center;
+        font-size: rem(58px);
+        margin-bottom: rem(10px);
+    }
+}
+
+.dark-center_description {
+    font-size: rem(14px);
+    font-family: "Ubuntu";
+    font-weight: 400;
+    color: white;
+    margin-bottom: rem(35px);
+
+    @include tablets {
+        text-align: center;
+    }
+
+    @include phones {
+        text-align: center;
+    }
+}
+
+.dark-center_price {
+    @include tablets {
+        text-align: center;
+    }
+
+    @include phones {
+        text-align: center;
+        
+    }
+}
+.price-num {
+    font-family: "Gagalin";
+    font-size: rem(72px);
+    line-height: .9;
+    color: #e35028;
+
+    @include phones {
+        font-size: rem(68px);
+    }
+}
+
+.price-ru {
+    font-family: "Gagalin";
+    font-size: rem(30px);
+    line-height: .9;
+    color: #e35028;
+}
+

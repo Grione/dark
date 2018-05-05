@@ -1,0 +1,76 @@
+.first-screen {
+    width: 100vw;
+    height: 100vh;
+    background: url("../img/bg/bg1.jpg") center center no-repeat;
+    background-size: cover; 
+}
+
+.menu-button {
+    margin-left: rem(15px);
+}
+.section1-main{
+    display: flex;
+    align-items: center;
+    flex: .8;
+    justify-content: center;
+
+    @include tablets {
+        flex-direction: column;
+    }
+}
+
+.section1-burger {
+    width: 44%;
+
+    @include phones {
+        width: 75%;
+    }
+}
+.burger-img {
+    max-width: 95%;
+
+} 
+
+.section1_text {
+    width: 44%;
+
+    @include tablets {
+        width: 87%;
+        text-align: center;
+    }
+}
+
+.section-title {
+    font-family: 'Gagalin';
+    color: #f9b43b;
+    font-size: rem(72px);
+    font-weight: normal;
+    white-space: nowrap;
+
+    @include phones {
+        font-size: rem(63px);
+    } 
+}
+
+.section1_text-two {
+    font-family: 'Lifehack';
+    color: #ffffff;
+    font-size: rem(65px);
+    text-transform: lowercase;
+    margin-top: rem(20px);
+    line-height: 1;
+
+    @include phones {
+        font-size: rem(54px);
+    }
+}
+
+.scroll {
+    position: relative;
+    left: 50%;
+    bottom:rem(20px);
+    width: rem(29px);
+    height: rem(14px);
+    background-image: url("../img/bg/arrow-scroll.png");
+    background-size: cover;
+}

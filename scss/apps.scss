@@ -1,0 +1,142 @@
+.radio-buttons {
+
+    @include tablets {
+        display: none;
+    }
+}
+
+.menu-button_link {
+    display: inline-block;   
+    font-family: 'Ubuntu';
+    font-weight: 500;
+    font-size: 13px;
+    padding: 12px 16px;
+    // margin-left: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: white;
+    background-color: #e45028;
+    border-radius: 4px;  
+    
+    &:hover {
+        background-color: #c1401e;
+        transition: .4s;
+    }
+}
+
+
+.radio-buttons-list {
+    position: fixed;
+    top: 90px;
+    right: 53px;
+    list-style: none;
+}
+
+.radio-buttons-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    position: relative;
+}
+.radio-buttons-link:hover {
+    border-color: white;
+}
+
+.radio-buttons-link__activ {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    position: relative;
+    border-color: white;
+}   
+
+.radio-buttons-link:before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    display: block;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mobile-menu_list {
+    list-style: none;
+}
+
+.mobile-menu_item {
+    width: 24px;
+    height: 4px;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    background-color: white;
+    margin-left: 10px;
+    display:none;
+
+    @include tablets {
+        display: flex;
+    }
+}
+
+.mobile-nav {
+    position: fixed;
+    top: -1000px;
+    background-color: #2f3234;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-nav_activ {
+    top: 0;
+}
+.mobile-nav_close {
+    position: absolute;
+    right:20px;
+    top: 32px;
+}
+
+.mobile-nav_list {
+    list-style: none;
+
+}
+
+.mobile-nav_item {
+    text-align: center;
+    margin-bottom: 20px;
+    :after {
+        content: "";
+        display: block;
+        width: 2px;
+        height: 2px;
+        border: 1px solid white;
+        border-radius: 50%;
+        background-color: white;
+        position: relative;
+        left: 50%;
+        margin-top: 15px;
+    }
+}
+
+.mobile-nav_link {
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+    display: block;   
+    
+}
