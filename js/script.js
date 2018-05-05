@@ -179,5 +179,10 @@ $('[data-scroll-to]').on('click' , e => {
         });
       });
 
+// test JQuery
+$('.scroll-link').on('click', e => {
+console.log("клик");
+e.preventDefault();
+});     
 
   
