@@ -1741,7 +1741,8 @@ h1, h2, h3, h4 {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  text-decoration: none; }
+  text-decoration: none;
+  cursor: pointer; }
   .meal:hover + .meal-hover {
     -webkit-transition: .6s;
     -o-transition: .6s;
