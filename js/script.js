@@ -91,6 +91,11 @@ const sections = $('.section');
 const display = $('.maincontent');
 let inScroll = false;
 
+//определяет моб. устройство (библиотека)
+const mobileDetect = new MobileDetect(window.navigator.userAgent);
+const isMobile = mobileDetect.mobile();
+
+
 const setActiveMenuItem = itemEq => {
     $('.radio-buttons-link').eq(itemEq).addClass('radio-buttons-link__activ')
     .siblings().removeClass('radio-buttons-link__activ')
@@ -159,18 +164,7 @@ $('[data-scroll-to]').on('click' , e => {
     const target = $(e.currentTarget).attr('data-scroll-to');
     
     performTransition(target);
-})
-
- $(document).swipe( {
-      //Generic swipe handler for all directions
-      swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-        
-        //плагин возвращает фактическое движение пальцев, нужно наоборот
-
-        const scrollDirection = direction === 'down' ? 'up' : 'down';
-        scrollToSection(scrollDirection);
-      }
-    });
+});
 
     /// slider
     $(document).ready(function(){
@@ -178,6 +172,23 @@ $('[data-scroll-to]').on('click' , e => {
         
         });
       });
+
+if (isMobile) {
+    $(document).swipe({
+        //Generic swipe handler for all directions
+        swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+          
+          //плагин возвращает фактическое движение пальцев, нужно наоборот
+  
+          const scrollDirection = direction === 'down' ? 'up' : 'down';
+          scrollToSection(scrollDirection);
+        }
+      });
+}
+
+
+
+
 
 // test JQuery
 $('.scroll-link').on('click', e => {
