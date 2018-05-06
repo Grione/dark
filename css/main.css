@@ -531,6 +531,9 @@ h1, h2, h3, h4 {
   transition: 1s;
   will-change: transform; }
 
+.section {
+  height: 100%; }
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;
