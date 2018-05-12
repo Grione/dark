@@ -36,14 +36,23 @@ white-space: nowrap;
         height: 25%;
     }
 }
-.forms {
+// .forms {
+//     display: flex;
+
+//     @include tablets {
+//         flex-direction: column;
+//         align-items: center;
+//     }
+    
+// }
+
+.form {
     display: flex;
 
     @include tablets {
         flex-direction: column;
         align-items: center;
     }
-    
 }
 
 .form_left {
@@ -220,6 +229,12 @@ white-space: nowrap;
     }
 }
 
+.order-button_hidden {
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
 .order-button_order {
     display: inline-block;
     padding: rem(10px) rem(16px);
@@ -236,4 +251,11 @@ white-space: nowrap;
     color: #fff;
     border-radius: 5px;
     text-decoration: none;
+}
+
+.append {
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid #f9b43b;
 }
