@@ -6,7 +6,7 @@
     $appartment = $_POST['appartment'];
     $floor = $_POST['floor'];
     $comment = $_POST['comment'];
-    $pay = $_POST['pay'];
+    $pay = $_POST['pay-option'];
     
 
     $disturb = $_POST['dont-disturb']; // 1 или null
@@ -37,25 +37,24 @@
     "MIME-Version: 1.0" . "\r\n" .
     "Content-type: text/html; charset=UTF-8" . "\r\n";
 
-    mail('gavrilov.gri@yandex.ru', 'Заказ', $mail_message, $headers);
-
-    echo $mail_message;
-
-    // if ($mail) {
+    $mail = mail('gavrilov.gri@yandex.ru', 'Заказ', $mail_message, $headers);
+    
+    // if ($mail){
     //     echo 'done';
+
     // }else{
-    //     echo 'error'; 
+    //     echo 'error';
     // }
 
-    // $data = [];
+    $data = array();
 
-    // if ($mail) {
-    //     $data['status'] = "OK";
-    //     $data['mes'] = "Письмо успешно отправлено";
-    // }else{
-    //     $data['status'] = "NO";
-    //     $data['mes'] = "На сервере произошла ошибка";
-    // }
+    if ($mail) {
+        $data['status'] = "OK";
+        $data['mes'] = "Ваш заказ отправлен";
+    }else{
+        $data['status'] = "NO";
+        $data['mes'] = "На сервере произошла ошибка";
+    }
 
-    // echo json_encode($data);
+    echo json_encode($data); //превращаем массив в json "json_encode"
 ?>
