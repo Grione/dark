@@ -532,7 +532,10 @@ h1, h2, h3, h4 {
   will-change: transform; }
 
 .section {
-  height: 100% !important; }
+  height: 100vh !important; }
+  @media screen and (max-width: 480px) {
+    .section {
+      height: 100%; } }
 
 .header {
   display: -webkit-box;
@@ -739,7 +742,7 @@ h1, h2, h3, h4 {
 
 .section-best {
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   background: url("../img/bg/bg2.jpg") center center no-repeat;
   background-size: cover; }
 
