@@ -730,6 +730,9 @@ h1, h2, h3, h4 {
     left: 50%;
     margin-top: 15px; }
 
+.mobile-nav_item:last-child :after {
+  display: none; }
+
 .mobile-nav_link {
   text-decoration: none;
   font-size: 24px;
@@ -785,7 +788,7 @@ h1, h2, h3, h4 {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
-      width: 100%;
+      width: 90%;
       margin-top: 1.125rem; } }
 
 .best_pic {
@@ -815,8 +818,9 @@ h1, h2, h3, h4 {
   @media screen and (max-width: 480px) {
     .item-title {
       margin-top: 0;
-      white-space: nowrap;
-      font-size: 1.75rem; } }
+      white-space: pre-wrap;
+      font-size: 1.75rem;
+      line-height: 0.7; } }
 
 .item-desc {
   font-family: 'Ubuntu';
@@ -1276,6 +1280,11 @@ h1, h2, h3, h4 {
   padding: 3.75rem 2.1875rem;
   color: #fff;
   line-height: 2; }
+  @media screen and (max-width: 480px) {
+    .drop-txt {
+      font-size: 13px;
+      padding: 1.875rem 0.9375rem;
+      line-height: 1.7; } }
 
 .menu-close {
   position: absolute;
@@ -1847,7 +1856,7 @@ h1, h2, h3, h4 {
   padding-top: 3.125rem; }
   @media screen and (max-width: 768px) {
     .dark-center_desc {
-      padding-top: 0; } }
+      padding: 10px; } }
   @media screen and (max-width: 480px) {
     .dark-center_desc {
       padding-top: 0; } }

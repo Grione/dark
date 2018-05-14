@@ -41,7 +41,7 @@
 
     @include phones {
         display: flex;
-        width: 100%;
+        width: 90%;
         margin-top: rem(18px);
     }
     
@@ -73,8 +73,9 @@
     
     @include phones {
         margin-top: 0;
-        white-space: nowrap;
+        white-space: pre-wrap;
         font-size: rem(28px);
+        line-height: 0.7;
     }
     
 }

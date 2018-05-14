@@ -98,6 +98,12 @@
     padding: rem(60px) rem(35px);
     color: #fff;
     line-height: 2;
+
+    @include phones {
+        font-size: 13px;
+        padding: rem(30px) rem(15px);
+        line-height: 1.7;
+    }
 }
 
 .menu-close {
