@@ -25,6 +25,10 @@
     @include phones {
         width: 75%;
     }
+
+    @include tablets {
+        width: 75%;
+    }
 }
 .burger-img {
     max-width: 95%;

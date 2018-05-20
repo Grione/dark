@@ -141,4 +141,8 @@
         width: initial;
         padding: rem(22px);
     }
+
+    @include tablets {
+        width: 100%;
+    }
 }

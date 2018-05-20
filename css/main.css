@@ -427,6 +427,9 @@ template {
   @media screen and (max-width: 480px) {
     .section1-burger {
       width: 75%; } }
+  @media screen and (max-width: 768px) {
+    .section1-burger {
+      width: 75%; } }
 
 .burger-img {
   max-width: 95%; }
@@ -1182,6 +1185,9 @@ h1, h2, h3, h4 {
     .team-txt_desc {
       width: initial;
       padding: 1.375rem; } }
+  @media screen and (max-width: 768px) {
+    .team-txt_desc {
+      width: 100%; } }
 
 .section-menu {
   width: 100vw;
@@ -1190,12 +1196,18 @@ h1, h2, h3, h4 {
   background-size: cover;
   padding: 5rem;
   position: relative; }
+  @media screen and (max-width: 480px) {
+    .section-menu {
+      padding: 15px; } }
 
 .menu-title {
   font-family: 'Gagalin';
   color: #fff;
   font-size: 4.5rem;
   font-weight: normal; }
+  @media screen and (max-width: 480px) {
+    .menu-title {
+      font-size: 4.0625rem; } }
 
 .menu-acco {
   position: absolute;
@@ -1204,6 +1216,9 @@ h1, h2, h3, h4 {
   right: 0;
   width: 70%; }
   @media screen and (max-width: 480px) {
+    .menu-acco {
+      width: 100%; } }
+  @media screen and (max-width: 768px) {
     .menu-acco {
       width: 100%; } }
 
@@ -1229,6 +1244,9 @@ h1, h2, h3, h4 {
   max-width: 5rem;
   height: 100%;
   list-style: none; }
+  @media screen and (max-width: 480px) {
+    .menu-item {
+      max-width: 4.375rem; } }
 
 .menu-item_link {
   position: relative;
